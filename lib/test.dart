@@ -28,8 +28,8 @@ void main(){
   print(answer);
 
 
-  while(i<5) {
-    stdout.write("enter your name :");
+  while(i<10) {
+    stdout.write("Guess your number :");
     var input = stdin.readLineSync();
     var guess=int.tryParse(input!);
     if(guess==answer){
