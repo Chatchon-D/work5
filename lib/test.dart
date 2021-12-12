@@ -47,6 +47,7 @@ void main(){
           print(guess.toString()+" is TOO LOW! ▼");
         }
         count++;
+        //s
       }
       //print(count);
     }
