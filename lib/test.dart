@@ -14,8 +14,8 @@ void main(){
   //var i=123; //int
 
 
-  var i = 0;
-  
+  bool i = false;
+  var count=0;
   
   
   /*var r =  Random();
@@ -24,24 +24,32 @@ void main(){
 
 
   var r = Random();
-  var answer = r.nextInt(5);
+  var answer = r.nextInt(100+1);
   print(answer);
 
-
-  while(i<10) {
-    stdout.write("Guess your number :");
+  print("Guess the number ");
+  while(i==false) {
+    stdout.write("Guess the number between 1 and 100 :");
     var input = stdin.readLineSync();
     var guess=int.tryParse(input!);
-    if(guess==answer){
-      print("correct");
-      break;
+    if(guess!=null) {
+      if (guess == answer) {
+        print(guess.toString()+" is correct ❤, total guesses :"+count.toString());
+        i = true;
+        //break;
+      }
+      else {
+        if (guess>answer) {
+          print(guess.toString()+" is TOO HIGH! ▲");
+        }
+        else if(guess<answer){
+          print(guess.toString()+" is TOO LOW! ▼");
+        }
+        count++;
+      }
+      //print(count);
     }
-    else{
-      print("false");
-    }
-    i++;
   }
-
 }
 
 
