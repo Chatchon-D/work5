@@ -25,7 +25,7 @@ void main(){
 
   var r = Random();
   var answer = r.nextInt(100+1);
-  print(answer);
+  //print(answer);
 
   print("Guess the number ");
   while(i==false) {
@@ -34,6 +34,7 @@ void main(){
     var guess=int.tryParse(input!);
     if(guess!=null) {
       if (guess == answer) {
+        count++;
         print(guess.toString()+" is correct ❤, total guesses :"+count.toString());
         i = true;
         //break;
